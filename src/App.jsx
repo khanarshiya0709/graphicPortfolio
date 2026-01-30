@@ -1,10 +1,16 @@
-import React from 'react'
+import React from 'react';
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+
 
 function App() {
   return (
-    <div><Navbar /></div>
-  )
+    <>
+      <Navbar />
+      <Hero />
+
+    </>
+  );
 }
 
 export default App
