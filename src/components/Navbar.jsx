@@ -20,11 +20,12 @@ function Navbar() {
                 </div>
 
                 {/* Desktop Menu */}
-                <div className="hidden sm:flex gap-8">
-                    <a className="text-black text-lg">Home</a>
-                    <a className="text-black text-lg">About</a>
-                    <a className="text-black text-lg">Work</a>
-                    <a className="text-black text-lg">Videos</a>
+                <div className="hidden sm:flex gap-8 text-xl ">
+                    <a className="text-black inline-block hover:text-white hover:scale-110 transition">Home</a>
+                    <a className="text-black inline-block hover:text-white hover:scale-110 transition">About</a>
+                    <a className="text-black inline-block hover:text-white hover:scale-110 transition">Work</a>
+                    <a className="text-black inline-block hover:text-white hover:scale-110 transition">Videos</a>
+
                 </div>
 
                 {/* Desktop Button */}

@@ -1,13 +1,137 @@
-function Work() {
-    return (
-        <div className="bg-purple">
-            {/* Heading */}
-            <h1 className="text-left sm:text-center pl-8 py-4 text-2xl font-bold mt-2">
+// function Work() {
+//     return (
+//         <div className="bg-purple ">
+//             {/* Heading */}
+//             <h1 className="text-left sm:text-center pl-8 py-4 text-2xl font-bold my-2">
+//                 My Work
+//             </h1>
 
+//             <div className="max-w-5xl mx-auto px-6 sm:px-0">
+//                 <div className="bg-gray-200 flex rounded-xl overflow-x-auto flex-shrink-0 snap-x snap-mandatory">
+//                     <img
+//                         src="/project1.jpg"
+//                         alt="project photos"
+//                         className="w-72 h-[400px] object-cover m-4 rounded-3xl snap-center transition-transform duration-300 scale-90 scale-100
+
+//                 border-2 border-transparent
+//                 hover:border-pink-600
+//                 transition-all"/>
+
+//                     <img
+//                         src="/project2.jpg"
+//                         alt="project photos"
+//                         className="w-72 h-[400px] object-cover m-4 rounded-3xl snap-center transition-transform duration-300
+// scale-90
+
+//                 border-2 border-transparent
+//                 hover:border-pink-600
+//                 transition-all"/>
+
+//                     <img
+//                         src="/project3.jpg"
+//                         alt="project photos"
+//                         className="w-72 h-[400px] object-cover m-4 rounded-3xl snap-center
+//                 border-2 border-transparent
+//                 hover:border-pink-600
+//                 transition-all"/>
+
+//                     <img
+//                         src="/project4.jpg"
+//                         alt="project photos"
+//                         className="w-72 h-[400px] object-cover m-4 rounded-3xl  snap-center transition-transform duration-300
+// scale-90
+
+//                 border-2 border-transparent
+//                 hover:border-pink-600
+//                 transition-all"/>
+
+
+
+//                 </div>
+//             </div>
+
+//         </div>
+//     )
+// }
+// export default Work;
+
+
+import { useRef, useState } from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
+
+
+
+function Work() {
+    const containerRef = useRef(null);
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const images = [
+        "/project1.jpg",
+        "/project2.jpg",
+        "/project3.jpg",
+        "/project4.jpg",
+        "/project5.jpg",
+
+    ];
+
+    const handleScroll = () => {
+        const container = containerRef.current;
+        const center = container.scrollLeft + container.offsetWidth / 2;
+
+        let closestIndex = 0;
+        let minDistance = Infinity;
+
+        Array.from(container.children).forEach((child, index) => {
+            const imgCenter = child.offsetLeft + child.offsetWidth / 2;
+            const distance = Math.abs(center - imgCenter);
+
+            if (distance < minDistance) {
+                minDistance = distance;
+                closestIndex = index;
+            }
+        });
+
+        setActiveIndex(closestIndex);
+    };
+
+    return (
+        <div className="bg-purple py-6">
+            <h1 className="text-left sm:text-center pl-8 py-4 text-2xl font-bold my-2">
                 My Work
             </h1>
 
+            <div className="max-w-5xl mx-auto px-6 sm:px-0">
+                <div
+                    ref={containerRef}
+                    onScroll={handleScroll}
+                    className="bg-gray-200 flex rounded-xl overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+                >
+                    {images.map((img, index) => (
+                        <img
+                            key={index}
+                            src={img}
+                            alt="project"
+                            className={`w-72 h-[400px] object-cover  my-6 rounded-3xl
+                          flex-shrink-0 snap-center 
+                          transition-transform duration-300
+                          ${activeIndex === index
+                                    ? "scale-100 blur-0"
+                                    : "scale-90 blur-[2px]"
+                                }`}
+                        />
+                    ))}
+                </div>
+            </div>
+
+            <button className="mx-auto flex items-center justify-center gap-2 px-7 py-2 my-6 rounded-full bg-white text-black hover:scale-95 transition border-2 border-black">
+                Show More <FaArrowRightLong />
+
+
+            </button>
+
         </div>
-    )
+    );
 }
+
 export default Work;
+

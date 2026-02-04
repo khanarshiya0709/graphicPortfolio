@@ -21,9 +21,9 @@ function About() {
                 />
 
                 {/* TEXT + SKILLS */}
-                <div className="text-center sm:text-left mt-6 sm:mt-0 max-w-xl">
+                <div className="text-left mt-6 sm:mt-0 max-w-xl">
 
-                    <p className="text-lg text-gray-700">
+                    <p className="text-lg text-gray-700 pl-6 sm:pl-2">
                         I am a creative graphic designer with strong experience in branding,
                         social media creatives, and visual storytelling. I love transforming
                         ideas into clean, impactful designs that communicate clearly and
@@ -34,53 +34,53 @@ function About() {
                     </p>
 
                     {/* SKILLS */}
-                    <div className="mt-6 space-y-4 ">
+                    <div className="mt-6 space-y-4 px-6">
 
-                        {/* Photoshop
-                        <div>
-                            <div className="flex justify-between items-center text-sm font-medium">
-                                <span>Photoshop</span>
-                                <span>90%</span>
+
+
+                        {/*  Adobe Photoshop */}
+                        <div className="hover:scale-105 transition">
+                            <div className="flex justify-between items-center text-sm font-medium pb-1">
+                                <span>Adobe Photoshop</span>
+                                <span>38%</span>
                             </div>
-                            <div className="h-2 bg-gray-200 rounded-full">
-                                <div className="h-2 bg-pink-500 rounded-full w-[90%]"></div>
+                            <div className="h-3 bg-gray-200 rounded-full">
+                                <div className="h-3 bg-pink-500 rounded-full w-[38%]"></div>
                             </div>
-                        </div> */}
-
-                        {/* Photoshop */}
-                        <div className="flex items-center hover:scale-110 transition">
-                            {/* skill name */}
-                            <span className="w-28 text-sm font-medium">Photoshop</span>
-
-                            {/* progress bar */}
-                            {/* <div className="flex-1 h-3 bg-gray-200 rounded-full w-[90%]"> */}
-                            <div className="h-3 bg-pink-500 rounded-full w-[80%]"></div>
-                            {/* </div> */}
-
-                            {/* percentage */}
-                            {/* <span className="w-10 text-sm font-medium text-right">90%</span> */}
                         </div>
 
 
-                        {/* Illustrator */}
-                        <div className="hover:scale-110 transition">
-                            <div className="flex justify-between items-center text-sm font-medium">
+
+                        {/* Adobe Illustrator */}
+                        <div className="hover:scale-105 transition">
+                            <div className="flex justify-between items-center text-sm font-medium pb-1">
                                 <span>Illustrator</span>
                                 <span>85%</span>
                             </div>
-                            <div className="h-2 bg-gray-200 rounded-full">
-                                <div className="h-2 bg-pink-500 rounded-full w-[85%]"></div>
+                            <div className="h-3 bg-gray-200 rounded-full">
+                                <div className="h-3 bg-pink-500 rounded-full w-[85%]"></div>
                             </div>
                         </div>
 
-                        {/* Branding */}
-                        <div>
-                            <div className="flex justify-between items-center text-sm font-medium">
-                                <span>Branding</span>
-                                <span>80%</span>
+                        {/* CoralDraw */}
+                        <div className="hover:scale-105 transition">
+                            <div className="flex justify-between items-center text-sm font-medium pb-1">
+                                <span>CoralDraw</span>
+                                <span>67%</span>
                             </div>
-                            <div className="h-2 bg-gray-200 rounded-full">
-                                <div className="h-2 bg-pink-500 rounded-full w-[80%]"></div>
+                            <div className="h-3 bg-gray-200 rounded-full">
+                                <div className="h-3 bg-pink-500 rounded-full w-[67%]"></div>
+                            </div>
+                        </div>
+
+                        {/* Canva */}
+                        <div className="hover:scale-105 transition">
+                            <div className="flex justify-between items-center text-sm font-medium pb-1">
+                                <span>Canva</span>
+                                <span>95%</span>
+                            </div>
+                            <div className="h-3 bg-gray-200 rounded-full">
+                                <div className="h-3 bg-pink-500 rounded-full w-[95%]"></div>
                             </div>
                         </div>
 
