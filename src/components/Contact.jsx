@@ -15,10 +15,10 @@ function Contact() {
             </h2>
 
             {/* CONTENT */}
-            <div className="max-w-5xl mx-auto flex flex-col sm:flex-row gap-8">
+            <div className="max-w-5xl  mx-auto  flex flex-col sm:flex-row gap-14">
 
                 {/* LEFT : LETS TALK */}
-                <div className="sm:w-1/2 text-left px-2 sm:px-0">
+                <div className="sm:w-1/2 text-left px-8 sm:px-0">
                     <h1 className="text-pink-500 text-2xl font-bold mb-3">
                         Let's Talk
                     </h1>
@@ -48,7 +48,7 @@ function Contact() {
                 </div>
 
                 {/* RIGHT : FORM */}
-                <div className="sm:w-1/2">
+                <div className="sm:w-1/2 px-8 sm:px-0">
                     <label className="block mb-1 font-medium">Your Name</label>
                     <input
                         type="text"
@@ -74,7 +74,7 @@ function Contact() {
 
                     />
 
-                    <button className="flex items-center gap-2 px-7 py-2 rounded-full border-2 border-black bg-purple-500 text-white hover:scale-105 transition">
+                    <button className="flex items-center gap-2 px-7 py-2 mb-4 rounded-full border-2 border-black bg-purple-500 text-white hover:scale-105 transition">
                         Send Message
                     </button>
                 </div>

@@ -18,7 +18,7 @@ function Hero() {
 
                 {/* text + buttons */}
                 <div className=" text-center mt-6 sm:mt-0">
-                    <h1 className="text-3xl font-bold">I'm Amjad Khan.</h1>
+                    <h1 className="text-6xl font-bold">I'm Amjad Khan.</h1>
                     <h1 className="text-3xl font-bold mt-2">Graphic Designer</h1>
                     <p className="text-lg mt-2">In Branding & Social media creatives</p>
                     <p className="text-lg font-bold mt-2">
