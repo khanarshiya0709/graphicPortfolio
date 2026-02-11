@@ -39,8 +39,8 @@ function Work() {
     };
 
     return (
-        <div className="bg-purple py-6">
-            <h1 className="text-left sm:text-center pl-8 py-4 text-2xl font-bold my-2">
+        <div className="bg-dark-soft py-6">
+            <h1 id="work" className="text-left sm:text-center pl-8 py-4 text-4xl sm:text-6xl font-bold my-2 text-white">
                 My Work
             </h1>
 
@@ -48,7 +48,7 @@ function Work() {
                 <div
                     ref={containerRef}
                     onScroll={handleScroll}
-                    className="bg-gray-200 flex rounded-xl overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+                    className="bg-dark flex rounded-xl overflow-x-auto snap-x snap-mandatory scrollbar-hide"
                 >
                     {images.map((img, index) => (
                         <img
@@ -67,7 +67,7 @@ function Work() {
                 </div>
             </div>
 
-            <button className="mx-auto flex items-center justify-center gap-2 px-7 py-2 my-6 rounded-full bg-white text-black hover:scale-95 transition border-2 border-black">
+            <button className="mx-auto flex items-center justify-center gap-2 px-7 py-2 my-6 rounded-full  bg-gradient-primary text-white hover:scale-95 transition border-2 border-black">
                 Show More <FaArrowRightLong />
 
 

@@ -1,9 +1,9 @@
 function About() {
     return (
-        <div className="bg-white">
+        <div className="bg-dark-soft">
 
             {/* Heading */}
-            <h1 className="text-left sm:text-center pl-8 py-4 text-2xl font-bold ">
+            <h1 id="about" className="text-left sm:text-center pl-8 py-4 text-2xl font-bold text-white text-4xl sm:text-6xl">
                 About Me
             </h1>
 
@@ -15,7 +15,7 @@ function About() {
                     alt="Graphic designer portrait"
                     className="hidden sm:block w-[320px] h-[400px] rounded-xl object-cover
                      border-2 border-transparent
-                     hover:border-purple-600
+                     hover:border-white
                      hover:shadow-2xl hover:shadow-black/40
                      transition-all duration-200"
                 />
@@ -23,7 +23,7 @@ function About() {
                 {/* TEXT + SKILLS */}
                 <div className="text-left mt-6 sm:mt-0 max-w-xl">
 
-                    <p className="text-lg text-gray-700 pl-6 sm:pl-2">
+                    <p className="text-lg text-white pl-6 sm:pl-2">
                         I am a creative graphic designer with strong experience in branding,
                         social media creatives, and visual storytelling. I love transforming
                         ideas into clean, impactful designs that communicate clearly and
@@ -34,7 +34,7 @@ function About() {
                     </p>
 
                     {/* SKILLS */}
-                    <div className="mt-6 space-y-4 px-6">
+                    <div className="mt-6 space-y-4 px-6 text-white">
 
 
 
@@ -45,7 +45,7 @@ function About() {
                                 <span>38%</span>
                             </div>
                             <div className="h-3 bg-gray-200 rounded-full">
-                                <div className="h-3 bg-pink-500 rounded-full w-[38%]"></div>
+                                <div className="h-3 bg-gradient-primary rounded-full w-[38%]"></div>
                             </div>
                         </div>
 
@@ -58,7 +58,7 @@ function About() {
                                 <span>85%</span>
                             </div>
                             <div className="h-3 bg-gray-200 rounded-full">
-                                <div className="h-3 bg-pink-500 rounded-full w-[85%]"></div>
+                                <div className="h-3 bg-gradient-primary rounded-full w-[85%]"></div>
                             </div>
                         </div>
 
@@ -69,7 +69,7 @@ function About() {
                                 <span>67%</span>
                             </div>
                             <div className="h-3 bg-gray-200 rounded-full">
-                                <div className="h-3 bg-pink-500 rounded-full w-[67%]"></div>
+                                <div className="h-3 bg-gradient-primary rounded-full w-[67%]"></div>
                             </div>
                         </div>
 
@@ -80,7 +80,7 @@ function About() {
                                 <span>95%</span>
                             </div>
                             <div className="h-3 bg-gray-200 rounded-full">
-                                <div className="h-3 bg-pink-500 rounded-full w-[95%]"></div>
+                                <div className="h-3 bg-gradient-primary rounded-full w-[95%]"></div>
                             </div>
                         </div>
 

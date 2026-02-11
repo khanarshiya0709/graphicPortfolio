@@ -9,3 +9,28 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+.bg-dark {
+    background-color: #0F0F0F;
+    /* pure dark */
+}
+
+.bg-dark-soft {
+    background-color: #1A1A1A;
+    /* thoda light dark */
+}
+
+/* GRADIENT */
+.bg-gradient-primary {
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+}
+
+.text-gradient {
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
