@@ -2,6 +2,8 @@
 
 import { useRef, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+
 
 
 
@@ -67,11 +69,14 @@ function Work() {
                 </div>
             </div>
 
-            <button className="mx-auto flex items-center justify-center gap-2 px-7 py-2 my-6 rounded-full  bg-gradient-primary text-white hover:scale-95 transition border-2 border-black">
-                Show More <FaArrowRightLong />
-
-
-            </button>
+            <div className="flex justify-center my-6">
+                <Link
+                    to="/works"
+                    className="inline-flex items-center gap-2 px-7 py-2 rounded-full bg-gradient-primary text-white hover:scale-95 transition border-2 border-black"
+                >
+                    Show More <FaArrowRightLong />
+                </Link>
+            </div>
 
         </div>
     );

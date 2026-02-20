@@ -11,34 +11,49 @@ function Videos() {
     ];
 
     return (
-        <div className="bg-dark-soft min-h-screen px-6 py-10">
+        <div className="bg-dark-soft  px-6 py-8">
 
+            {/* Back Button */}
             <Link
                 to="/"
-                className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-primary text-black hover:scale-105 transition mb-8"
+                className="inline-flex items-center gap-2 px-6 py-2 rounded-full 
+                bg-gradient-primary text-black hover:scale-105 
+                transition mb-6"
             >
                 <FaArrowLeftLong />
                 Back to Home
             </Link>
 
-            <h1 className="text-4xl font-bold text-white mb-10">
+            {/* Heading */}
+            <h1 className="text-4xl font-bold text-white mb-6">
                 My Videos
             </h1>
 
-            {/* Auto Responsive Grid */}
-            <div className="grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(250px,1fr))] max-w-6xl mx-auto">
+            {/* Responsive Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-auto ">
+
                 {videos.map((video, index) => (
                     <div
                         key={index}
-                        className="bg-gray-800 rounded-2xl p-3 shadow-lg hover:shadow-purple-500/30 transition"
+                        className="bg-gray-800 rounded-2xl p-3 shadow-lg 
+                        hover:shadow-purple-500/50 transition"
                     >
-                        <video
-                            src={video}
-                            controls
-                            className="rounded-xl w-full"
-                        />
+
+                        {/* Fixed Ratio Video Container */}
+                        <div className="w-full aspect-[4/5] 
+                        bg-black rounded-xl overflow-hidden">
+
+                            <video
+                                src={video}
+                                controls
+                                className="w-full h-full object-cover"
+                            />
+
+                        </div>
+
                     </div>
                 ))}
+
             </div>
         </div>
     );
