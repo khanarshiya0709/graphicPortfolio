@@ -28,15 +28,15 @@ function Works() {
 
     return (
         <div className="bg-dark-soft min-h-screen text-white">
-            <div className="max-w-6xl mx-auto px-6 py-6">
+            <div className="max-w-6xl mx-auto px-6 pt-4 ">
 
                 {/* NAV */}
-                <div className="flex items-center gap-10 overflow-x-auto whitespace-nowrap scrollbar-hide">
+                <div className="bg-dark flex items-center rounded-xl py-4 px-4 gap-10 overflow-x-auto whitespace-nowrap scrollbar-hide">
                     <Link
                         to="/"
-                        className="text-4xl font-bold text-white mr-4"
+                        className="text-4xl font-bold text-white  "
                     >
-                        <MdHome />
+                        <MdHome className='bg-gradient-primary rounded-lg' />
                     </Link>
 
                     {categories.map((cat) => (
@@ -44,7 +44,7 @@ function Works() {
                             key={cat}
                             onClick={() => setSelected(cat)}
                             className={`text-lg sm:text-2xl pb-2 transition ${selected === cat
-                                ? "text-white border-b-2 border-white"
+                                ? "text-gradient gradient-underline"
                                 : "text-gray-400 hover:text-white"
                                 }`}
                         >
@@ -54,7 +54,7 @@ function Works() {
                 </div>
 
                 {/* GRID */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-10">
                     {filteredProjects.map((project) => (
                         <ProjectCard
                             key={project.id}
@@ -69,15 +69,14 @@ function Works() {
             {/* IMAGE PREVIEW MODAL */}
             {previewImage && (
                 <div
-                    className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+                    className="fixed inset-0 bg-black/95 flex items-center justify-center  "
                     onClick={() => setPreviewImage(null)}
                 >
                     <img
                         src={previewImage}
                         alt=""
-                        // className="max-w-5xl max-h-[90vh] rounded-xl"
-                        className="w-[90vw] max-h-[90vh] object-contain rounded-xl"
-
+                        // onClick={(e) => e.stopPropagation()}
+                        className="max-w-[95vw] max-h-[90vh] object-contain rounded-2xl"
                     />
                 </div>
             )}

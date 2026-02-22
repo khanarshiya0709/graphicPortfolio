@@ -8,6 +8,8 @@ function Videos() {
         "/videoss/video3.mp4",
         "/videoss/video4.mp4",
         "/videoss/video5.mp4",
+        "/videoss/video6.mp4",
+
     ];
 
     return (
@@ -40,7 +42,7 @@ function Videos() {
                     >
 
                         {/* Fixed Ratio Video Container */}
-                        <div className="w-full aspect-[4/5] 
+                        <div className=" w-full aspect-[4/5] 
                         bg-black rounded-xl overflow-hidden">
 
                             <video
